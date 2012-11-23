@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>  Here is my 2 cents on Doctrine (ORM) | Dynamic Guy</title>
+
+<link rel="stylesheet" href="http://dynamicguy.com/wp-content/themes/Polished/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://dynamicguy.com/wp-content/themes/Polished/style.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="Dynamic Guy RSS Feed" href="http://dynamicguy.com/feed/" />
+<link rel="alternate" type="application/atom+xml" title="Dynamic Guy Atom Feed" href="http://dynamicguy.com/feed/atom/" />
+<link rel="pingback" href="http://dynamicguy.com/xmlrpc.php" />
+
+<!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="http://dynamicguy.com/wp-content/themes/Polished/css/ie7style.css" />
+	<![endif]-->
+	<!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="http://dynamicguy.com/wp-content/themes/Polished/css/ie8style.css" />
+	<![endif]-->
+    <!--[if lt IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://dynamicguy.com/wp-content/themes/Polished/css/ie6style.css" />
+    <script src="http://dynamicguy.com/wp-content/themes/Polished/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">DD_belatedPNG.fix('div#top, img#logo, img.logo_line, div#left_arrow a img, div#right_arrow a img, span a.readmore, #f_menu div.featitem,  #f_menu div.active, ul.sf-menu li.backLava');</script>
+<![endif]-->
+
+<script type="text/javascript">
+	document.documentElement.className = 'js';
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="Dynamic Guy &raquo; Here is my 2 cents on Doctrine (ORM) Comments Feed" href="http://dynamicguy.com/2010/09/here-is-my-2-cents-on-doctrine-orm/feed/" />
+<meta content="Polished v.1.1.3" name="generator"/><link rel='stylesheet' id='wp-pagenavi-css'  href='http://dynamicguy.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://dynamicguy.com/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<script type='text/javascript' src='http://dynamicguy.com/wp-includes/js/jquery/jquery.js?ver=1.4.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dynamicguy.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://dynamicguy.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Dynamic Guy' href='http://dynamicguy.com/' />
+<link rel='start' title='Access the inbox of Facebook Users with PHP' href='http://dynamicguy.com/2010/07/access-the-inbox-of-facebook-users-with-php/' />
+<link rel='prev' title='PHP instant gallery maker with thumbnail' href='http://dynamicguy.com/2010/08/php-instant-gallery-maker/' />
+<meta name="generator" content="WordPress 3.0.1" />
+<link rel='canonical' href='http://dynamicguy.com/2010/09/here-is-my-2-cents-on-doctrine-orm/' />
+<link rel='shortlink' href='http://wp.me/p11dUH-1i' />
+			<link rel='stylesheet' href='http://dynamicguy.com/wp-content/plugins/amazonpress/css/style.css' type='text/css' media='all' />
+			
+<link rel="stylesheet" href="http://dynamicguy.com/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+
+</head>
+<body class="single single-post postid-80">
+
+	<div id="top">
+		<div id="header">
+			
+			<!-- Start Logo -->
+			<a href="http://dynamicguy.com"><img src="http://dynamicguy.com/wp-content/themes/Polished/images/logo.png" alt="Polished Logo" id="logo"/></a>
+			<img src="http://dynamicguy.com/wp-content/themes/Polished/images/separator.png" width="2" height="59" alt="Line" class="logo_line"/>
+			<p id="logo_title">Yet another LAMP developer!</p>
+			<!-- End Logo -->
+			
+			<!-- Start Searchbox -->
+			<div id="searchico">
+				<a href="#" id="search"><img src="http://dynamicguy.com/wp-content/themes/Polished/images/search_btn.png" width="19" height="19" alt="Search Btn"/></a>
+				<form method="get" id="searchbox" action="http://dynamicguy.com/">
+					<input type="text" value="search this site..." name="s" id="s" />
+				</form>
+			</div>
+			<!-- End Searchbox -->
+		
+			<!-- Start Menu -->
+			<ul class="sf-menu">
+									<li ><a href="http://dynamicguy.com">Home</a></li>
+				
+					<li class="cat-item cat-item-16"><a href="http://dynamicguy.com/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://dynamicguy.com/category/java/" title="View all posts filed under Java">Java</a>
+<ul class='children'>
+	<li class="cat-item cat-item-14"><a href="http://dynamicguy.com/category/java/android/" title="View all posts filed under Android">Android</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://dynamicguy.com/category/java/j2me/" title="View all posts filed under J2ME">J2ME</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://dynamicguy.com/category/linux/" title="View all posts filed under Linux">Linux</a>
+<ul class='children'>
+	<li class="cat-item cat-item-9"><a href="http://dynamicguy.com/category/linux/debian/" title="View all posts filed under Debian">Debian</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://dynamicguy.com/category/linux/shell/" title="View all posts filed under Shell">Shell</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://dynamicguy.com/category/linux/ubuntu/" title="View all posts filed under Ubuntu">Ubuntu</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://dynamicguy.com/category/mysql/" title="View all posts filed under MySQL">MySQL</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://dynamicguy.com/category/php/" title="View all posts filed under PHP">PHP</a>
+<ul class='children'>
+	<li class="cat-item cat-item-33"><a href="http://dynamicguy.com/category/php/codeigniter/" title="View all posts filed under Code Igniter">Code Igniter</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="http://dynamicguy.com/category/php/drupal/" title="View all posts filed under Drupal">Drupal</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="http://dynamicguy.com/category/php/magento/" title="View all posts filed under Magento">Magento</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="http://dynamicguy.com/category/php/symfony/" title="View all posts filed under Symfony">Symfony</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="http://dynamicguy.com/category/php/zend_framework/" title="View all posts filed under Zend Framework">Zend Framework</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://dynamicguy.com/category/security/" title="View all posts filed under Security">Security</a>
+</li>
+
+				<li class="page_item page-item-2"><a href="http://dynamicguy.com/about/" title="About">About</a></li>
+			</ul>
+			
+			<!-- End Menu -->	
+
+					</div>
+		<!-- End Header -->
+        <div style="clear: both;"></div>
+	</div>
+	<!-- End Top -->	
+	<div id="wrap">
+	<!-- Main Content-->
+		<img src="http://dynamicguy.com/wp-content/themes/Polished/images/content-top.gif" alt="content top" class="content-wrap" />
+		<div id="content">
+			<!-- Start Main Window -->
+			<div id="main">
+						
+									<div class="new_post entry clearfix">
+
+						<h1 id="post-title">Here is my 2 cents on Doctrine (ORM)</h1>
+
+						<div class="post_info">
+
+	
+		Posted  by <a href="http://dynamicguy.com/author/supercow/" title="Posts by Nurul Ferdous">Nurul Ferdous</a> on Sep 25, 2010 in <a href="http://dynamicguy.com/category/php/codeigniter/" title="View all posts in Code Igniter" rel="category tag">Code Igniter</a>, <a href="http://dynamicguy.com/category/featured/" title="View all posts in Featured" rel="category tag">Featured</a>, <a href="http://dynamicguy.com/category/mysql/" title="View all posts in MySQL" rel="category tag">MySQL</a>, <a href="http://dynamicguy.com/category/php/" title="View all posts in PHP" rel="category tag">PHP</a>, <a href="http://dynamicguy.com/category/php/symfony/" title="View all posts in Symfony" rel="category tag">Symfony</a>, <a href="http://dynamicguy.com/category/php/zend_framework/" title="View all posts in Zend Framework" rel="category tag">Zend Framework</a> | <img src="http://dynamicguy.com/wp-content/themes/Polished/images/comments.png" width="20" height="18" alt="Comments"/> <a href="http://dynamicguy.com/2010/09/here-is-my-2-cents-on-doctrine-orm/#respond" title="Comment on Here is my 2 cents on Doctrine (ORM)">0 comments</a>
+	</div>						
+						<div class="postcontent">
+						
+																								  
+																
+							
+							<p><strong>What is Doctrine?</strong><br />
+Doctrine is a popular ORM for PHP which works with RDBMS via PHP objects. This is built inspired by Hibernate from JAVA. This acts as an abstraction layer between PHP and RDBMS.</p>
+<p><strong>What is it good for?</strong></p>
+<ul>
+<li> It really hide the the business logics (tables, sql, relations) via the db abstraction layer while active record map objects to tables.</li>
+<li>It has a strong caching (of cached caching) system with apc, memcached, sqlite</li>
+<li>Caching could be activated globally or per query basis</li>
+<li>Automatic CRUD</li>
+<li>NestedSet behavior algorithm could be implemented (version 1.x only)</li>
+<li>pre* and post* method hooks</li>
+<li>Can work on PHP, YML, Annotations and XML schema files</li>
+<li>Automatically modify DQL queries</li>
+<li>Primitive and more complex data type validation</li>
+<li>Minimize overheads by loading properties only when it&#8217;s required</li>
+<li>DQL supports lot&#8217;s of standard SQL features</li>
+<li>Migration helps making schema versionable</li>
+<li>Unit Testing has been added recently</li>
+<li style="text-align: left;">Anything left? (shoot me a comment I will add it)</li>
+</ul>
+<p><strong>What is it not good for?</strong></p>
+<ul>
+<li>It works on PDO which has lots of open bugs while dealing with PostgreSQL and Oracle</li>
+<li>Foreign keys cannot be used as identifier</li>
+<li>Really wants the id columns of all models and some times (not always) magically adds them to the query</li>
+<li>Due to hydration complex queries may need to be written in a specific order</li>
+<li>Not all DB functions recognized in DQL</li>
+<li>Not all data types are supported in DBAL</li>
+<li>DBAL tries to work on all schemas in a postgresql database</li>
+<li>Some SQL constructs not supported in DQL</li>
+<li>Significant OO overhead when not monitoring the generated queries</li>
+</ul>
+<p><strong>Describe a scenario where you most definitely wouldn&#8217;t use Doctrine?</strong></p>
+<p><strong></strong>Though I used it in my last postgresql project where I had to fix them by some jail break. want some example? ok&#8230;</p>
+<ul>
+<li>Gimme a bigserial column via doctrine entity.</li>
+<li>Deal multiple schema via ORM in same postgresql database and multiple database. if I have to run it via $conn-&gt;executeQuery($sql); then why Doctrine?</li>
+<li>Hard to work with SQLlogger (it shows the query in ui). it should be in FirePHP. I am writing a wrapper for that.</li>
+<li>It sucks (sometimes) while dealing with other than MySQL stuffs</li>
+</ul>
+<p>So if it&#8217;s a psql based project with multiple db and multiple schemas in same db with more than 5 billions record I won&#8217;t go for doctrine.</p>
+<p>else I will love to use doctrine. I am a big fan of Hibernate and GORM and Doctrine as well <img src='http://dynamicguy.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+
+<div class='amazonpress'><h3>Related Reading:</h3>
+<div class='product'><a href='http://www.amazon.com/Zend-Framework-Lambert-M-Surhone/dp/6130922671?SubscriptionId=AKIAIOHB4WIH72EBMFXA&tag=dynguy-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=6130922671' target='' rel='nofollow'><img src='http://ecx.images-amazon.com/images/I/41SlJRdFuZL._SL75_.jpg' class='amazonpress-product-image' alt='Zend Framework' title='Zend Framework' /><span class='amazonpress-product-title'>Zend Framework</span></a>
+</div><div class='product'><a href='http://www.amazon.com/Plus-loin-avec-symfony-French/dp/2918390186?SubscriptionId=AKIAIOHB4WIH72EBMFXA&tag=dynguy-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=2918390186' target='' rel='nofollow'><img src='http://ecx.images-amazon.com/images/I/51mlSLMdEhL._SL75_.jpg' class='amazonpress-product-image' alt='Plus loin avec symfony (French Edition)' title='Plus loin avec symfony (French Edition)' /><span class='amazonpress-product-title'>Plus loin avec symfony (French Edition)</span></a>
+</div><div class='product'><a href='http://www.amazon.com/Featured-Player-James-Curtis/dp/0810830442?SubscriptionId=AKIAIOHB4WIH72EBMFXA&tag=dynguy-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0810830442' target='' rel='nofollow'><img src='http://ecx.images-amazon.com/images/I/51N57HAHJKL._SL75_.jpg' class='amazonpress-product-image' alt='Featured Player' title='Featured Player' /><span class='amazonpress-product-title'>Featured Player</span></a>
+</div><div class='product'><a href='http://www.amazon.com/MySQL-Crash-Course-Ben-Forta/dp/0672327120?SubscriptionId=AKIAIOHB4WIH72EBMFXA&tag=CJ7COUK-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0672327120' target='' rel='nofollow'><img src='http://ecx.images-amazon.com/images/I/41sHaipIA2L._SL75_.jpg' class='amazonpress-product-image' alt='MySQL Crash Course' title='MySQL Crash Course' /><span class='amazonpress-product-title'>MySQL Crash Course</span></a>
+</div><div class='product'><a href='http://www.amazon.com/North-Light-Collection-viewpoints-contemporary/dp/0891340165?SubscriptionId=AKIAIOHB4WIH72EBMFXA&tag=dynguy-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0891340165' target='' rel='nofollow'><span class='amazonpress-product-title'>North Light Collection 2: The works, viewpoints, and techniques of the contemporary artists as featured in the pages of North light magazine</span></a>
+</div></div>
+
+<p>Related posts:</p><ol><li><a href='http://dynamicguy.com/2010/08/generate-a-twitter-like-timespan-from-a-give-timestamp-in-symfony2-or-zf2/' rel='bookmark' title='Permanent Link: Generate a twitter like timespan from a given timestamp in Symfony2 or ZF2'>Generate a twitter like timespan from a given timestamp in Symfony2 or ZF2</a></li>
+</ol>
+														
+							
+														
+							<!-- You can start editing here. -->
+
+	<div id="comment-section" class="nocomments">
+					<!-- If comments are open, but there are no comments. -->
+		
+	<div id="respond">
+		<h3>
+			Leave a Reply		</h3>
+		<div class="cancel-comment-reply"> <small>
+			<a rel="nofollow" id="cancel-comment-reply-link" href="/2010/09/here-is-my-2-cents-on-doctrine-orm/#respond" style="display:none;">Click here to cancel reply.</a>			</small> </div> <!-- end cancel-comment-reply div -->
+					<form action="http://dynamicguy.com/wp-comments-post.php" method="post" id="commentform">
+							<p>
+					<input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' />
+					<label for="author"><small>Name						(required)						</small></label>
+				</p>
+				<p>
+					<input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' />
+					<label for="email"><small>Mail (will not be published)						(required)						</small></label>
+				</p>
+				<p>
+					<input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+					<label for="url"><small>Website</small></label>
+				</p>
+						<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; &lt;pre lang=&quot;&quot; line=&quot;&quot; escaped=&quot;&quot;&gt; </code></small></p>-->
+			<p>
+				<textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
+			</p>
+			<p>
+				<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+				<input type='hidden' name='comment_post_ID' value='80' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+			</p>
+						</form>
+			</div> <!-- end respond div -->
+</div> <!-- end comment-section -->						</div> 
+					</div>
+			</div>
+			<!-- End Main -->
+			
+<!-- This is a hidden link to show you where this theme come from, remove or leave it is Optional. up 2 u -->
+<noscript><a href="http://www.free-premium-wordpress-themes.com">premium wordpress themes</a></noscript>
+<!-- END -->			
+
+<div id="sidebar">
+		
+	<div id="text-4" class="block widget_text">			<div class="textwidget"><SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822/US/dynguy-20/8001/28c3eb1e-653a-46d6-9879-4d62243e6b87"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fdynguy-20%2F8001%2F28c3eb1e-653a-46d6-9879-4d62243e6b87&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT></div>
+		</div><div id="text-3" class="block widget_text">			<div class="textwidget"><a href="http://twitter.com/ferdous"><img src="http://dynamicguy.com/wp-content/uploads/2010/07/twitter.png" alt="follow me" /></a></div>
+		</div><div id="amazonpress-widget" class="block AmazonPress_widget_display"></div>		<div id="recent-posts-3" class="block widget_recent_entries">		<h2>Recent Articles</h2><img width="258" height="16" alt="Sidebar Hr" src="http://dynamicguy.com/wp-content/themes/Polished/images/sidebar_hr.png" class="divider"/>		<ul>
+				<li><a href="http://dynamicguy.com/2010/09/here-is-my-2-cents-on-doctrine-orm/" title="Here is my 2 cents on Doctrine (ORM)">Here is my 2 cents on Doctrine (ORM)</a></li>
+				<li><a href="http://dynamicguy.com/2010/08/php-instant-gallery-maker/" title="PHP instant gallery maker with thumbnail">PHP instant gallery maker with thumbnail</a></li>
+				<li><a href="http://dynamicguy.com/2010/08/generate-a-twitter-like-timespan-from-a-give-timestamp-in-symfony2-or-zf2/" title="Generate a twitter like timespan from a given timestamp in Symfony2 or ZF2">Generate a twitter like timespan from a given timestamp in Symfony2 or ZF2</a></li>
+				<li><a href="http://dynamicguy.com/2010/07/here-is-the-update/" title="Here is the update">Here is the update</a></li>
+				<li><a href="http://dynamicguy.com/2010/07/html2pcl-and-html2ps-wrapper-class/" title="html2pcl and html2ps wrapper class">html2pcl and html2ps wrapper class</a></li>
+				</ul>
+		</div><div id="linkcat-36" class="block widget_links"><h2>Blogs I read</h2><img width="258" height="16" alt="Sidebar Hr" src="http://dynamicguy.com/wp-content/themes/Polished/images/sidebar_hr.png" class="divider"/>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.alistapart.com/">A List Apart</a></li>
+<li><a href="http://android-developers.blogspot.com/">Android Developers</a></li>
+<li><a href="http://blog.astrumfutura.com/">Astrumfutura</a></li>
+<li><a href="http://shiflett.org/">Chris Shiflett</a></li>
+<li><a href="http://googlecode.blogspot.com/">Google Code</a></li>
+<li><a href="http://mashable.com">Mashable</a></li>
+<li><a href="http://www.mysqlperformanceblog.com/">MySQL performance blog</a></li>
+<li><a href="http://weierophinney.net/matthew/">phly, boy, fly</a></li>
+<li><a href="http://www.phparch.com/">PHP Architect</a></li>
+<li><a href="http://sixrevisions.com/">Six Revisions</a></li>
+<li><a href="http://smashingmagazine.com">Smashing Magazine</a></li>
+<li><a href="http://www.symfony-project.org/blog/">Symfony Blog</a></li>
+<li><a href="http://zenhabits.net/">Zen Habits</a></li>
+
+	</ul>
+</div>
+<div id="categories-3" class="block widget_categories"><h2>Categories</h2><img width="258" height="16" alt="Sidebar Hr" src="http://dynamicguy.com/wp-content/themes/Polished/images/sidebar_hr.png" class="divider"/>		<ul>
+	<li class="cat-item cat-item-16"><a href="http://dynamicguy.com/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://dynamicguy.com/category/linux/" title="View all posts filed under Linux">Linux</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://dynamicguy.com/category/mysql/" title="View all posts filed under MySQL">MySQL</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://dynamicguy.com/category/php/" title="View all posts filed under PHP">PHP</a>
+<ul class='children'>
+	<li class="cat-item cat-item-33"><a href="http://dynamicguy.com/category/php/codeigniter/" title="View all posts filed under Code Igniter">Code Igniter</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="http://dynamicguy.com/category/php/symfony/" title="View all posts filed under Symfony">Symfony</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="http://dynamicguy.com/category/php/zend_framework/" title="View all posts filed under Zend Framework">Zend Framework</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://dynamicguy.com/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a>
+</li>
+		</ul>
+</div><div id="text-5" class="block widget_text">			<div class="textwidget"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">All Contents of this site written</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://dynamicguy.com" property="cc:attributionName" rel="cc:attributionURL">Nurul Ferdous</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://dynamicguy.com" rel="dc:source">dynamicguy.com</a>.</div>
+		</div>	
+	
+</div> <!-- end sidebar -->	</div>                                                                                                                                                                                    
+<img class="content-wrap" alt="content top" src="http://dynamicguy.com/wp-content/themes/Polished/images/content-bottom.gif" />
+<div id="footer_widgets"><div class="block_b"><h2>I am Social!</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.facebook.com/nurul.ferdous">Facebook</a></li>
+<li><a href="http://www.flickr.com/photos/dynamicguy/">Flickr</a></li>
+<li><a href="http://bd.linkedin.com/in/nurulferdous">LinkedIn</a></li>
+<li><a href="http://github.com/dynamicguy">Me at github</a></li>
+<li><a href="http://zend.com/zce.php?c=ZEND009916">My ZCE profile</a></li>
+<li><a href="http://twitter.com/ferdous" title="Me at Twitter">Twitter</a></li>
+
+	</ul>
+</div>
+<div class="block_b"><h2>Who am I?</h2>	
+<div class="clearfix">
+	<img src="http://dynamicguy.com/wp-content/themes/Polished/timthumb.php?src=http://dynamicguy.com/wp-content/uploads/2010/07/php5-zce-logo-new.gif&amp;h=74&amp;w=74&amp;zc=1" id="about-image" alt="about us image" />
+	<p>Linux Geek, Code Junkie, Technology Enthusiast, Early Adopter, Idea Evangelist, Tech Support Blogger, Bootstrapper, Technology Consultant, Caffeine lover, Tyrant, Thicker Quicker Picker Upper and a SERIAL CODER.</p>
+</div> <!-- end about me section -->
+</div><div class="block_b"><h2>Tags</h2><div><a href='http://dynamicguy.com/tag/bot/' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>bot</a>
+<a href='http://dynamicguy.com/tag/dbal/' class='tag-link-48' title='1 topic' style='font-size: 8pt;'>dbal</a>
+<a href='http://dynamicguy.com/tag/doctrine/' class='tag-link-44' title='1 topic' style='font-size: 8pt;'>doctrine</a>
+<a href='http://dynamicguy.com/tag/facebook/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>facebook</a>
+<a href='http://dynamicguy.com/tag/fun/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>fun</a>
+<a href='http://dynamicguy.com/tag/gallery/' class='tag-link-41' title='1 topic' style='font-size: 8pt;'>gallery</a>
+<a href='http://dynamicguy.com/tag/ghostscript/' class='tag-link-25' title='1 topic' style='font-size: 8pt;'>ghostscript</a>
+<a href='http://dynamicguy.com/tag/html/' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>html</a>
+<a href='http://dynamicguy.com/tag/im/' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>im</a>
+<a href='http://dynamicguy.com/tag/image/' class='tag-link-42' title='1 topic' style='font-size: 8pt;'>image</a>
+<a href='http://dynamicguy.com/tag/inbox/' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>inbox</a>
+<a href='http://dynamicguy.com/tag/job/' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>job</a>
+<a href='http://dynamicguy.com/tag/me/' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>me</a>
+<a href='http://dynamicguy.com/tag/my-life/' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>my life</a>
+<a href='http://dynamicguy.com/tag/oracle/' class='tag-link-47' title='1 topic' style='font-size: 8pt;'>oracle</a>
+<a href='http://dynamicguy.com/tag/orm/' class='tag-link-45' title='1 topic' style='font-size: 8pt;'>orm</a>
+<a href='http://dynamicguy.com/tag/pcl/' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>pcl</a>
+<a href='http://dynamicguy.com/tag/php-2/' class='tag-link-21' title='4 topics' style='font-size: 22pt;'>php</a>
+<a href='http://dynamicguy.com/tag/postgresql/' class='tag-link-46' title='1 topic' style='font-size: 8pt;'>postgresql</a>
+<a href='http://dynamicguy.com/tag/social-2/' class='tag-link-20' title='1 topic' style='font-size: 8pt;'>social</a>
+<a href='http://dynamicguy.com/tag/symfony2/' class='tag-link-37' title='1 topic' style='font-size: 8pt;'>Symfony2</a>
+<a href='http://dynamicguy.com/tag/thumbnail/' class='tag-link-43' title='1 topic' style='font-size: 8pt;'>thumbnail</a>
+<a href='http://dynamicguy.com/tag/time/' class='tag-link-40' title='1 topic' style='font-size: 8pt;'>time</a>
+<a href='http://dynamicguy.com/tag/timespan/' class='tag-link-38' title='1 topic' style='font-size: 8pt;'>timespan</a>
+<a href='http://dynamicguy.com/tag/user/' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>user</a>
+<a href='http://dynamicguy.com/tag/zend-framewok/' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>Zend Framewok</a></div>
+</div><div class="clear"></div></div>
+	<div id="footer">
+		<p id="copyright">Powered by <a href="http://www.wordpress.com">WordPress</a> | Designed by <a href="http://www.elegantthemes.com">Elegant Themes</a></p>
+	</div>
+	</div>                                                                                                                                                                                    
+	
+<script src="http://dynamicguy.com/wp-content/themes/Polished/js/jquery.lavalamp.1.3.3-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://dynamicguy.com/wp-content/themes/Polished/js/jquery.cycle.all.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://dynamicguy.com/wp-content/themes/Polished/js/superfish.js" type="text/javascript" charset="utf-8"></script>   
+<script src="http://dynamicguy.com/wp-content/themes/Polished/js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+    
+<script type="text/javascript">
+//<![CDATA[
+ 
+jQuery(function(){
+
+		jQuery.noConflict();
+	
+		jQuery('ul.sf-menu').superfish({
+			delay:       200,                            // one second delay on mouseout 
+			animation:   {'marginLeft':'0px',opacity:'show',height:'show'},  // fade-in and slide-down animation 
+			speed:       'fast',                          // faster animation speed 
+			autoArrows:  true,                           // disable generation of arrow mark-up 
+			onBeforeShow:      function(){ this.css('marginLeft','20px'); },
+			dropShadows: false                            // disable drop shadows 
+		});
+		
+		jQuery('ul.sf-menu ul > li').addClass('noLava');
+		
+		jQuery('ul.sf-menu > li > a.sf-with-ul').parent('li').addClass('sf-ul');
+		
+				
+		if (!(jQuery("#footer_widgets .block_b").length == 0)) {
+			jQuery("#footer_widgets .block_b").each(function (index, domEle) {
+				// domEle == this
+				if ((index+1)%3 == 0) jQuery(domEle).after("<div class='clear'></div>");
+			});
+		};
+		
+		/* search form */
+		
+		jQuery('#search').toggle(
+			function () {jQuery('#searchbox').animate({opacity:'toggle', marginLeft:'-210px'},500);},
+			function () {jQuery('#searchbox').animate({opacity:'toggle', marginLeft:'-200px'}, 500);}
+		);
+		
+		var $searchinput = jQuery("#header #searchbox input");
+		var $searchvalue = $searchinput.val();
+		
+		$searchinput.focus(function(){
+			if (jQuery(this).val() == $searchvalue) jQuery(this).val("");
+		}).blur(function(){
+			if (jQuery(this).val() == "") jQuery(this).val($searchvalue);
+		});
+		
+	
+		jQuery('ul.sf-menu li ul').append('<li class="bottom_bg noLava"></li>');
+		jQuery('ul.sf-menu').lavaLamp();
+			
+		
+		});
+//]]>
+</script>	<!--stats_footer_test--><script src="http://stats.wordpress.com/e-201038.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({blog:'15068151',v:'ext',post:'80'});
+var load_cmc = function(){linktracker_init(15068151,80,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8351934-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.128 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-09-25 20:14:47 -->
